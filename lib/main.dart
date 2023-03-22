@@ -4,7 +4,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  static const String _title = 'Drawer del Luis';
+  static const String _title = 'Cruz Drawer';
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -38,11 +38,22 @@ class _MyHomePageState extends State<MyHomePage> {
 // Important: Remove any padding from the ListView.
 // padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.red,
+            const UserAccountsDrawerHeader(
+              // <-- SEE HERE
+              decoration: BoxDecoration(color: const Color(0xffe72d2d)),
+              accountName: Text(
+                "MiguelAngel Cruz Sanchez",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              child: Text('Encabezado'),
+              accountEmail: Text(
+                "a.20308051280594@cbtis128.edu.mx",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              currentAccountPicture: FlutterLogo(),
             ),
             ListTile(
               leading: Icon(
